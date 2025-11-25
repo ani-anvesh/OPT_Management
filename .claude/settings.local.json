@@ -11,7 +11,11 @@
       "Bash(node database/seed.js:*)",
       "Bash(curl:*)",
       "Bash(node -e:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: implement employee onboarding and training management system\n\nPhase 1-5 Complete: Core MVP Foundation\n\nBackend:\n- Set up Express server with SQLite database and session management\n- Implement authentication system (register/login/logout)\n- Create employee service with profile and dashboard endpoints\n- Build training module system with progress tracking and completion\n- Add timesheet service with validation and submission logic\n- Configure file upload middleware for work eligibility documents\n- Add comprehensive error handling and validation utilities\n\nFrontend:\n- Initialize Vite + React application with Tailwind CSS\n- Implement authentication flow (login/register pages)\n- Create employee dashboard with profile summary and stats\n- Build training page with progress visualization and module completion\n- Add protected routes and auth context for session management\n- Design responsive UI components with loading states and error handling\n\nDatabase:\n- Create 8-table schema (employees, training_modules, timesheets, expenses, etc)\n- Seed database with 5 demo employees, 10 training modules, and sample data\n- Implement foreign key constraints and indexes for performance\n\nFeatures Implemented:\n✅ US1: Employee self-onboarding with unique ID generation\n✅ US2: Training progress tracking with completion estimates\n✅ US3: Interactive module completion with real-time updates\n⚙️  US4: Timesheet backend (frontend pending)\n\nTech Stack:\n- Frontend: React 18, Vite, React Router, Axios, Tailwind CSS\n- Backend: Node.js, Express, SQLite (better-sqlite3), bcrypt\n- Session: express-session with secure cookies\n- File Upload: multer with validation\n\nDemo Credentials:\n- Employee: john.doe@company.com / Password123\n- Manager: manager@company.com / Manager123\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(lsof:*)",
+      "Bash(sqlite3:*)",
+      "Bash(kill:*)"
     ],
     "deny": [],
     "ask": []

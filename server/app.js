@@ -37,9 +37,9 @@ app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/employees', require('./routes/employee.routes'));
 app.use('/api/training', require('./routes/training.routes'));
 app.use('/api/timesheets', require('./routes/timesheet.routes'));
-// app.use('/api/expenses', require('./routes/expense.routes'));
-// app.use('/api/export', require('./routes/export.routes'));
-// app.use('/api/manager', require('./routes/manager.routes'));
+app.use('/api/expenses', require('./routes/expense.routes'));
+app.use('/api/export', require('./routes/export.routes'));
+app.use('/api/manager', require('./routes/manager.routes'));
 
 // Health check endpoint
 app.get('/health', (req, res) => {

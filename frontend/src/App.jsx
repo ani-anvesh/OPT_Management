@@ -5,11 +5,9 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import EmployeeDashboardPage from './pages/EmployeeDashboardPage';
 import TrainingPage from './pages/TrainingPage';
-
-// Placeholder pages - will be created in later phases
-const TimesheetPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Timesheet Page</h1></div>;
-const ExpensePage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Expense Page</h1></div>;
-const ManagerDashboard = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-2xl">Manager Dashboard</h1></div>;
+import TimesheetPage from './pages/TimesheetPage';
+import ExpensePage from './pages/ExpensePage';
+import ManagerDashboardPage from './pages/ManagerDashboardPage';
 
 function App() {
   return (
@@ -60,7 +58,7 @@ function App() {
             path="/manager/dashboard"
             element={
               <ProtectedRoute requireManager={true}>
-                <ManagerDashboard />
+                <ManagerDashboardPage />
               </ProtectedRoute>
             }
           />
