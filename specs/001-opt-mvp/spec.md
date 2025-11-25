@@ -154,6 +154,7 @@ A manager needs to monitor all employees under their supervision. The manager lo
 - **FR-002**: System MUST validate email addresses are in proper format and not already registered
 - **FR-003**: System MUST auto-generate a unique employee ID for each new registration
 - **FR-004**: System MUST allow employees to upload work eligibility documentation during registration in PDF format
+- **FR-004a**: System MUST reject work eligibility documents exceeding 10MB with clear error message
 - **FR-005**: System MUST store uploaded documents securely and link them to employee profiles
 - **FR-006**: System MUST display a training dashboard showing all assigned modules with status indicators
 - **FR-007**: System MUST calculate and display training progress as a percentage based on completed vs. total modules
@@ -164,11 +165,11 @@ A manager needs to monitor all employees under their supervision. The manager lo
 - **FR-012**: System MUST validate timesheet entries to prevent any day from exceeding 24 hours
 - **FR-013**: System MUST automatically calculate and display total weekly hours
 - **FR-014**: System MUST allow employees to add project descriptions and work locations to timesheets
-- **FR-015**: System MUST lock timesheets as read-only after submission with confirmation timestamp
+- **FR-015**: System MUST lock timesheets as read-only after submission with confirmation timestamp (prevents editing)
 - **FR-016**: System MUST allow employees to view all previously submitted timesheets
 - **FR-017**: System MUST allow employees to upload expense receipts in PDF, JPG, or PNG formats
 - **FR-018**: System MUST provide category selection for expense classification
-- **FR-018a**: System MUST support three expense categories: Education, Travel, and Other
+- **FR-018a**: System MUST support exactly three expense categories as defined in seed data: Education, Travel, and Other (single source of truth: database seed script)
 - **FR-019**: System MUST allow employees to enter expense amounts and descriptions
 - **FR-020**: System MUST display expense lists with filtering by category
 - **FR-021**: System MUST provide document preview or download for expense receipts
@@ -181,7 +182,7 @@ A manager needs to monitor all employees under their supervision. The manager lo
 - **FR-026a**: System MUST calculate compliance status based on three criteria: (1) complete profile with work eligibility uploaded, (2) timesheets submitted for current week, and (3) at least 10% training progress
 - **FR-027**: System MUST allow managers to export timesheet data as CSV files
 - **FR-028**: System MUST persist all employee data, timesheets, expenses, and documents across sessions
-- **FR-029**: System MUST prevent employees from editing or deleting submitted timesheets
+- **FR-029**: System MUST prevent employees from deleting submitted timesheets (editing prevention covered by FR-015)
 - **FR-030**: System MUST validate file uploads to reject unsupported formats
 - **FR-030a**: System MUST display inline error messages at the upload field when files are rejected (e.g., "Invalid format. Please upload PDF, JPG, or PNG")
 
@@ -280,7 +281,7 @@ A manager needs to monitor all employees under their supervision. The manager lo
 
 - **Process Dependencies**:
   - Training module structure must be defined and pre-populated before employee registration
-  - Expense categories (Education, Travel, Other) must be predefined before employees can categorize expenses
+  - Expense categories must be defined in database seed script (Education, Travel, Other) before employees can categorize expenses - this seed data serves as the single source of truth referenced in FR-018a
 
 ## Risks *(include if relevant)*
 
