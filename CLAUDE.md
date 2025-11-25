@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-OPT_Management is a system designed to manage Optional Practical Training (OPT) students, including:
-- Student onboarding processes
-- Course curriculum tracking
+Employee Skill Development & Onboarding System is designed to manage employee professional development, including:
+- Employee onboarding processes
+- Training module tracking
 - Progress monitoring
 - Timesheet management
 - Expense document handling
